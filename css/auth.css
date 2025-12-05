@@ -1,0 +1,159 @@
+/* css/auth.css */
+
+.auth-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-container h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.auth-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Tùy chỉnh cho đăng ký (Họ, Tên, Ngày sinh) */
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-row > div {
+    flex: 1;
+}
+
+/* --- BUTTONS --- */
+
+/* Nút Đăng nhập/Đăng ký chính (Màu xanh dương) */
+.btn-primary {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db; /* Màu xanh dương */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+/* Nút Tạo tài khoản mới (Màu xanh lá cây) */
+.btn-secondary {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #008000; /* Màu xanh lá cây đậm */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-secondary:hover {
+    background-color: #006400;
+}
+
+/* --- MESSAGES & LINKS --- */
+
+.message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.error-message {
+    background-color: #fdd;
+    color: #d9534f;
+    border: 1px solid #d9534f;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.switch-link {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.switch-link a {
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* Đường gạch ngang phân chia */
+.divider {
+    border-bottom: 1px solid #eee;
+    margin: 30px 0 20px;
+}
+/* css/auth.css (Dùng đoạn này thay cho .password-container cũ) */
+
+.form-group.password-container {
+    /* Đảm bảo khối này có position: relative cho icon con mắt */
+    position: relative; 
+    margin-bottom: 20px; 
+}
+
+/* Các đoạn còn lại giữ nguyên */
+.toggle-password { 
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    font-size: 1.1em;
+    z-index: 10;
+}
+
+.password-container input {
+    padding-right: 40px; 
+}

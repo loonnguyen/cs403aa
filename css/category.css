@@ -1,0 +1,146 @@
+/* css/category.css - PHIÊN BẢN ĐÃ SỬA LỖI LAYOUT */
+
+/* --- TÙY CHỈNH LAYOUT (SIDEBAR VÀ NỘI DUNG) --- */
+
+/* Đảm bảo sidebar và nội dung sản phẩm chiếm đủ chiều cao */
+.main-content-layout {
+    display: grid;
+    /* Chia sidebar (200px) và nội dung (phần còn lại) */
+    grid-template-columns: 200px 1fr; 
+    gap: 30px; /* Khoảng cách giữa sidebar và nội dung */
+    padding: 20px 0;
+}
+
+/* --- TÙY CHỈNH SIDEBAR --- */
+
+#productSidebar {
+    padding: 15px;
+    border-right: 1px solid #ddd; /* Đường phân cách nhẹ */
+    /* Thêm màu nền để phân biệt */
+    background-color: #f9f9f9; 
+    border-radius: 5px;
+}
+
+.filter-title {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3498db; /* Đường viền nổi bật */
+    padding-bottom: 10px;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group h5 {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.filter-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-group ul li {
+    margin-bottom: 5px;
+}
+
+.filter-group label {
+    display: block;
+    cursor: pointer;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Tùy chỉnh thanh range slider cơ bản */
+.slider {
+    width: 90%;
+}
+
+.filter-group p span {
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* --- TÙY CHỈNH PRODUCT GRID (ĐÃ SỬA LỖI KÍCH THƯỚC) --- */
+
+#productContent {
+    min-height: 600px;
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: #222;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.product-grid {
+    display: grid;
+    /* FIX: Thay thế auto-fill bằng repeat(4, 1fr) để đảm bảo 4 cột đều và ngăn tràn */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+    /* Đảm bảo thẻ sản phẩm không bị méo mó */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    /* FIX: Giảm chiều cao xuống để hình ảnh không bị quá lớn (tránh tràn) */
+    height: 180px; 
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 1.1em;
+    margin: 0 0 10px;
+    color: #333;
+    height: 40px; /* Cố định chiều cao cho tên sản phẩm */
+    overflow: hidden;
+}
+
+.product-info .price {
+    font-size: 1.3em;
+    color: #d9534f; /* Màu đỏ nổi bật cho giá */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-add-to-cart {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #4cae4c;
+}
